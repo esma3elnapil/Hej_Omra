@@ -12,6 +12,7 @@ import android.view.View;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -52,6 +53,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
                     public void onResponse(JSONObject response) {
                         // display response
                         Log.d("Response", response.toString());
+                        Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
