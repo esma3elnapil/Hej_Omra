@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hp.hej_omra.HomeActivityB"
+    tools:showIn="@layout/activity_home_b"
+    android:background="@drawable/bg2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="40dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/Hej_imv"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/haj"/>
+
+                <TextView
+                    android:textColor="#01312b"
+                    android:text="الحج"
+                    android:id="@+id/hjtv"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/Omra_imv"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/omra2"/>
+
+                <TextView
+                    android:textColor="#01312b"
+                    android:text="العمرة"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/omratv"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/azkar_id"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/prayhand" />
+
+                <TextView
+                    android:textColor="#01312b"
+                    android:text="اذكار"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/azkartv" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/meqat_id"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/mekat" />
+
+                <TextView
+                    android:textColor="#01312b"
+                    android:text="الميقات"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/meqattv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/hotels_id"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/hotel3" />
+
+                <TextView
+                    android:textColor="#01312b"
+                    android:text="بيانات الفندق"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hoteltv" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/another"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/more" />
+
+                <TextView
+                    android:textColor="#01312b"
+                    android:text="اخري"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/anothertv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

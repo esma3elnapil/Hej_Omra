@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Hej_Omra</string>
+    <string name="howihram">How Ihram</string>
+    <string name="allowinihram">Allowed In Ihram</string>
+    <string name="notallowinihram">Not Allowed In Ihram</string>
+    <string name="done">Done</string>
+    <string name="amen">Amen</string>
+    <string name="mosquedoaa">Mosque Doaa</string>
+    <string name="sttart">Start </string>
+    <string name="ibrahamshrine">Praying At Abraham shrine </string>
+    <string name="decompisitionofihram">Decomposition of ihram </string>
+
+
+    <string-array name="OmraListView">
+        <item>Al Ehram</item>
+        <item>Entering Mosque </item>
+        <item>Al Tawaf</item>
+        <item>Praying Beside Maqam Ibrahim</item>
+        <item>Al Saey</item>
+        <item>Al Tahlol</item>
+    </string-array>
+    <string name="title_activity_home_b">Home</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

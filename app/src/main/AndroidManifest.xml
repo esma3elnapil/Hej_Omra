@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hp.hej_omra">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ElOmraActivity" />
+        <activity android:name=".AlEhramActivity" />
+        <activity android:name=".E_MosqueActivity" />
+        <activity android:name=".AlTawafActivity" />
+        <activity android:name=".MaqamEbrahimActivity" />
+        <activity android:name=".AlSaeyActivity" />
+        <activity android:name=".AlTahlolActivity" />
+        <activity
+            android:name=".HomeActivityB"
+            android:label="@string/title_activity_home_b"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <service
+            android:name=".GPS_Service"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
