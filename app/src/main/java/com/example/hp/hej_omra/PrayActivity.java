@@ -2,9 +2,12 @@ package com.example.hp.hej_omra;
 
 import android.graphics.Typeface;
 import android.provider.ContactsContract;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +31,15 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
+                , WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //hide action bar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+        //set content view AFTER ABOVE sequence (to avoid crash)
         setContentView(R.layout.activity_pray);
 
         inti();
@@ -52,7 +64,6 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
         Midnight_TextView = (TextView) findViewById(R.id.midbighttv);
         f1 = (TextView) findViewById(R.id.f1);
         f2 = (TextView) findViewById(R.id.f2);
-        f3 = (TextView) findViewById(R.id.f3);
         f4 = (TextView) findViewById(R.id.f4);
         f5 = (TextView) findViewById(R.id.f5);
         f6 = (TextView) findViewById(R.id.f6);
@@ -61,19 +72,8 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
         f9 = (TextView) findViewById(R.id.f9);
         f10 = (TextView) findViewById(R.id.f10);
         // FONT
-        City_TextView.setTypeface(font);
-        Fagr_TextView.setTypeface(font);
-        Sunrise_TextView.setTypeface(font);
-        Duhr_TextView.setTypeface(font);
-        Asr_TextView.setTypeface(font);
-        Sunset_TextView.setTypeface(font);
-        Maghrib_TextView.setTypeface(font);
-        Isha_TextView.setTypeface(font);
-        Imsak_TextView.setTypeface(font);
-        Midnight_TextView.setTypeface(font);
         f1.setTypeface(font);
         f2.setTypeface(font);
-        f3.setTypeface(font);
         f4.setTypeface(font);
         f5.setTypeface(font);
         f6.setTypeface(font);
@@ -104,9 +104,7 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
                         // display response
                         try {
                             JSONObject jsonObject = response.getJSONObject("data");
-
                             JSONObject timings = jsonObject.getJSONObject("timings");
-
                             String Fajr = timings.getString("Fajr");
                             String Sunrise = timings.getString("Sunrise");
                             String Dhuhr = timings.getString("Dhuhr");
@@ -122,16 +120,16 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
                             String readable = date.getString("readable");
                             String timestamp = date.getString("timestamp");
 
-                            City_TextView.setText("Makkah");
-                            Fagr_TextView.setText(Fajr);
-                            Sunrise_TextView.setText(Sunrise);
-                            Duhr_TextView.setText(Dhuhr);
-                            Asr_TextView.setText(Asr);
-                            Sunset_TextView.setText(Sunset);
-                            Maghrib_TextView.setText(Maghrib);
-                            Isha_TextView.setText(Isha);
-                            Imsak_TextView.setText(Imsak);
-                            Midnight_TextView.setText(Midnight);
+                            City_TextView.setText("Makkah"+"\n"+readable);
+                            Fagr_TextView.setText(ReturnTime(Fajr));
+                            Sunrise_TextView.setText(ReturnTime(Sunrise));
+                            Duhr_TextView.setText(Dhuhr + " PM");
+                            Asr_TextView.setText(ReturnTime(Asr));
+                            Sunset_TextView.setText(ReturnTime(Sunset));
+                            Maghrib_TextView.setText(ReturnTime(Maghrib));
+                            Isha_TextView.setText(ReturnTime(Isha));
+                            Imsak_TextView.setText(ReturnTime(Imsak));
+                            Midnight_TextView.setText(ReturnTime(Midnight));
 
 
                             Toast.makeText(getApplicationContext(),Fajr.toString(),Toast.LENGTH_LONG).show();
@@ -155,11 +153,26 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
         );
-
         //34an myrg34 results 2dema
         getRequest.setShouldCache(false);
         // add it to the RequestQueue
         queue.add(getRequest);
+    }
+    private static String ReturnTime(String OldTime) {
+        int FirstTwoDigits = Integer.parseInt(OldTime.substring(0,2));
+        int LastTwoDigits= Integer.parseInt(OldTime.substring(3,5));
+        String Result="";
+        if (FirstTwoDigits > 12) {
+            FirstTwoDigits = FirstTwoDigits - 12;
+            Result = FirstTwoDigits+":"+LastTwoDigits+" PM";
+
+        }else if(FirstTwoDigits==00){
+            FirstTwoDigits = 12;
+            Result = FirstTwoDigits+":"+LastTwoDigits+" AM";
+        }else{
+            Result = FirstTwoDigits+":"+LastTwoDigits+" AM";
+        }
+        return Result;
     }
 
     @Override
