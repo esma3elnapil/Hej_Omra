@@ -139,7 +139,7 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
                             queue.add(getRequest);
 
 
