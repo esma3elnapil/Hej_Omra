@@ -21,10 +21,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class HomeActivityB extends AppCompatActivity implements View.OnClickListener {
-    private ImageView Hej, Omra, Azkar, Meqat, Hotels, TimeImageView;
+    private ImageView Hej, Omra, Azkar, Meqat, Hotels, TimeImageView,prayImageView;
     private TextView hejtv, omratv, azkartv, meqattv, hoteltv, anothertv, CityTv, TimeTv;
 
     Typeface font;
@@ -44,7 +45,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
     }
 
     private void TimeAndCityVolleyRequest() {
-        final String url = "http://httpbin.org/get?param1=hello";
+        final String url = "http://api.aladhan.com/timingsByCity?city=Makkah&country=sudia&method=4";
 
         // prepare the Request
         JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -52,25 +53,63 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onResponse(JSONObject response) {
                         // display response
-                        Log.d("Response", response.toString());
-                        Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
+                        try {
+                            JSONObject jsonObject = response.getJSONObject("data");
+
+                                     JSONObject timings = jsonObject.getJSONObject("timings");
+
+                            String Fajr = timings.getString("Fajr");
+                            String Sunrise = timings.getString("Sunrise");
+                            String Duhr = timings.getString("Duhr");
+                            String Asr = timings.getString("Asr");
+                            String Sunset = timings.getString("Sunset");
+                            String Maghrib = timings.getString("Maghrib");
+                            String Isha = timings.getString("Isha");
+                            String Imsak = timings.getString("Imsak");
+                            String Midnight = timings.getString("Midnight");
+
+                                     JSONObject date = jsonObject.getJSONObject("date");
+
+                            String readable = date.getString("readable");
+                            String timestamp = date.getString("timestamp");
+
+                            CityTv.setText("City : Makkah"
+                                    +"\n Fajr : "+Fajr
+                                    +"\n Sunrise : "+Sunrise
+                                    + "\n Duhr : "+Duhr
+                                    + "\n Asr : "+Asr
+                                    + "\n Sunset : "+Sunset
+                                    + "\n Maghrib : "+Maghrib
+                                    + "\n Isha : "+Isha
+                                    + "\n Imsak : "+Imsak
+                                    + "\n Midnight : "+Midnight);
+                            TimeTv.setText(readable);
+                            Toast.makeText(getApplicationContext(),Fajr.toString(),Toast.LENGTH_LONG).show();
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("Error.Response", String.valueOf(error));
+                        Toast.makeText(getApplicationContext(),"Error.Response :"+error.toString(),Toast.LENGTH_LONG).show();
+
                     }
                 }
         );
 
+        //34an myrg34 results 2dema
+        getRequest.setShouldCache(false);
         // add it to the RequestQueue
-        getRequest.setShouldCache(false); //34an myrg34 ntayg 2dema
         queue.add(getRequest);
     }
 
     private void inti() {
         queue = Volley.newRequestQueue(this);
+
         font = Typeface.createFromAsset(getAssets(), "fonts/jazel.ttf");
         CityTv = (TextView) findViewById(R.id.CityTv);
         TimeTv = (TextView) findViewById(R.id.TimeTv);
@@ -93,6 +132,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         Azkar = (ImageView) findViewById(R.id.azkar_id);
         Meqat = (ImageView) findViewById(R.id.meqat_id);
         Hotels = (ImageView) findViewById(R.id.hotels_id);
+        prayImageView= (ImageView) findViewById(R.id.another);
         TimeImageView = (ImageView) findViewById(R.id.TimeImageView);
 
 
@@ -101,6 +141,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         Azkar.setOnClickListener(this);
         Meqat.setOnClickListener(this);
         Hotels.setOnClickListener(this);
+        prayImageView.setOnClickListener(this);
 
     }
 
@@ -113,6 +154,9 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
             case R.id.Omra_imv:
                 startActivity(new Intent(HomeActivityB.this, ElOmraActivity.class));
                 break;
+            case R.id.omratv:
+                startActivity(new Intent(HomeActivityB.this, ElOmraActivity.class));
+                break;
 
             case R.id.azkar_id:
                 break;
@@ -121,6 +165,12 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.hotels_id:
+                break;
+            case R.id.another:
+                startActivity(new Intent(HomeActivityB.this, PrayActivity.class));
+                break;
+            case R.id.anothertv:
+                startActivity(new Intent(HomeActivityB.this, PrayActivity.class));
                 break;
         }
 

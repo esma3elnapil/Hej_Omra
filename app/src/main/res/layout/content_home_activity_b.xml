@@ -176,7 +176,7 @@
 
                 <TextView
                     android:textColor="#01312b"
-                    android:text="اخري"
+                    android:text="صلاه"
                     android:textSize="20sp"
                     android:gravity="center"
                     android:id="@+id/anothertv"

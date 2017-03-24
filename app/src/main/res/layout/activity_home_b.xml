@@ -58,9 +58,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_margin="16dp"
-                        android:layout_marginTop="5dp"
-                        android:textSize="25sp"
+                        android:layout_margin="5dp"
+                        android:paddingTop="10dp"
+                        android:textSize="16sp"
                         android:textAlignment="center"
                         android:text="10:15"
                         android:layout_width="match_parent"
@@ -76,8 +76,9 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_margin="16dp"
-                        android:textSize="25sp"
+                        android:layout_margin="5dp"
+                        android:paddingTop="10dp"
+                        android:textSize="16sp"
                         android:textAlignment="center"
                         android:text="City"
                         android:layout_width="match_parent"

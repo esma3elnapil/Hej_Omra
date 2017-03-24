@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hp.hej_omra.ElOmraActivity">
+    tools:context="com.example.hp.hej_omra.ElOmraActivity"
+    android:background="@drawable/bg2">
     <ListView
         android:id="@+id/elomra_lV"
         android:layout_width="match_parent"

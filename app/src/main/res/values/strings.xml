@@ -12,12 +12,12 @@
 
 
     <string-array name="OmraListView">
-        <item>Al Ehram</item>
-        <item>Entering Mosque </item>
-        <item>Al Tawaf</item>
-        <item>Praying Beside Maqam Ibrahim</item>
-        <item>Al Saey</item>
-        <item>Al Tahlol</item>
+        <item>الاحرام</item>
+        <item>دخول المسجد</item>
+        <item>الطواف</item>
+        <item>الصلاه عند المقام</item>
+        <item>السعي</item>
+        <item>التحلل</item>
     </string-array>
     <string name="title_activity_home_b">Home</string>
 

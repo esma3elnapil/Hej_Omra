@@ -89,8 +89,6 @@ public class ElOmraCustomAdapter extends BaseAdapter
                         con.startActivity(in6);
                         break;
 
-
-
                 }
 
 
@@ -99,4 +97,5 @@ public class ElOmraCustomAdapter extends BaseAdapter
 
         return rowView;
     }
+
 }
