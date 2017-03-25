@@ -2,12 +2,16 @@ package com.example.hp.hej_omra;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by hp on 3/13/2017.
@@ -49,11 +53,32 @@ public class ElOmraCustomAdapter extends BaseAdapter
 
         final TextView namee;
         ImageView image;
+        final CheckBox checkBox;
         View rowView = inflater.inflate(R.layout.omra_itemlist, null);
         namee= (TextView) rowView.findViewById(R.id.itemlist_TV);
         image= (ImageView) rowView.findViewById(R.id.itemlist_ImV);
 
-        //املاهم من الداتا بيز
+        checkBox = (CheckBox) rowView.findViewById(R.id.OmracheckBox);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    SharedPreferences sharedPreferences = con.getSharedPreferences("OmraSteps",0);
+                    SharedPreferences.Editor editor= sharedPreferences.edit();
+                    editor.putBoolean("EhramDone",true);
+                    editor.apply();
+                    Toast.makeText(con,"ehram true",Toast.LENGTH_SHORT).show();
+                }else if (!isChecked){
+                    SharedPreferences sharedPreferences = con.getSharedPreferences("OmraSteps",0);
+                    SharedPreferences.Editor editor= sharedPreferences.edit();
+                    editor.putBoolean("EhramDone",false);
+                    editor.apply();
+                    Toast.makeText(con,"ehram false",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //املاهم من الداتا بيز -- لا :P
         namee.setText(name[i]);
         image.setImageResource(pic[i]);
         rowView.setOnClickListener(new View.OnClickListener() {

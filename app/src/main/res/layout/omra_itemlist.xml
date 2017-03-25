@@ -7,7 +7,8 @@
     android:padding="10dp"
     android:layout_centerHorizontal="true"
     android:layout_centerInParent="true"
-    android:weightSum="2"
+    android:weightSum="3"
+    android:background="#b7cecece"
     >
 
     <ImageView
@@ -15,7 +16,7 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_weight="1"
-        android:background="@drawable/azkar" />
+         />
 
     <TextView
         android:id="@+id/itemlist_TV"
@@ -31,5 +32,15 @@
         android:text="العمرة"
         android:textColor="#011531"
         android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/OmracheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:text="تم" />
+
 
 </LinearLayout>

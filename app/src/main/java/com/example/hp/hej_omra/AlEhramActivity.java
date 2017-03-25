@@ -1,6 +1,7 @@
 package com.example.hp.hej_omra;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,9 +26,16 @@ public class AlEhramActivity extends AppCompatActivity implements View.OnClickLi
         switch (view.getId())
         {
             case R.id.bt:
-                startActivity(new Intent(AlEhramActivity.this,E_MosqueActivity.class));
+                SharedPreferences sharedPreferences = getSharedPreferences("OmraSteps",0);
+                SharedPreferences.Editor editor= sharedPreferences.edit();
+                editor.putBoolean("EhramDone",true);
+                if (editor.commit()){
+                    startActivity(new Intent(AlEhramActivity.this, ElOmraActivity.class));
+                }else{
+                    editor.commit();
+                    startActivity(new Intent(AlEhramActivity.this, ElOmraActivity.class));
+                }
                 break;
-
         }
 
     }

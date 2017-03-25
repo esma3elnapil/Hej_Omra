@@ -1,5 +1,6 @@
 package com.example.hp.hej_omra;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBar;
@@ -49,7 +50,6 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
 
     private void inti() {
         queue = Volley.newRequestQueue(this);
-
         font = Typeface.createFromAsset(getAssets(), "fonts/jazel.ttf");
 
         Fagr_TextView = (TextView) findViewById(R.id.fajrtv);
