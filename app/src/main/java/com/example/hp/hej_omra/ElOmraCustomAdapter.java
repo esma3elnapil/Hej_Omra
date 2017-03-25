@@ -68,6 +68,7 @@ public class ElOmraCustomAdapter extends BaseAdapter
                     editor.putBoolean("EhramDone",true);
                     editor.apply();
                     Toast.makeText(con,"ehram true",Toast.LENGTH_SHORT).show();
+
                 }else if (!isChecked){
                     SharedPreferences sharedPreferences = con.getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
