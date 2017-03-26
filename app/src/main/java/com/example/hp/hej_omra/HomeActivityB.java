@@ -111,8 +111,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         queue = Volley.newRequestQueue(this);
 
         font = Typeface.createFromAsset(getAssets(), "fonts/jazel.ttf");
-        CityTv = (TextView) findViewById(R.id.CityTv);
-        TimeTv = (TextView) findViewById(R.id.TimeTv);
+
         hejtv = (TextView) findViewById(R.id.hjtv);
         omratv = (TextView) findViewById(R.id.omratv);
         azkartv = (TextView) findViewById(R.id.azkartv);
@@ -133,7 +132,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         Meqat = (ImageView) findViewById(R.id.meqat_id);
         Hotels = (ImageView) findViewById(R.id.hotels_id);
         prayImageView= (ImageView) findViewById(R.id.another);
-        TimeImageView = (ImageView) findViewById(R.id.TimeImageView);
+
 
 
         Hej.setOnClickListener(this);

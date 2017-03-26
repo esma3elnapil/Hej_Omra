@@ -30,7 +30,7 @@
         android:paddingRight="10dp"
         android:paddingStart="10dp"
         android:text="العمرة"
-        android:textColor="#011531"
+        android:textColor="#010813"
         android:textSize="18sp" />
 
     <CheckBox

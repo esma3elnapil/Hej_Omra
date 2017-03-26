@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="Ehram">الإحرام          </string>
+    <string name="enteringmousq">دخول المسجد      </string>
+    <string name="Alsaey">السعي           </string>
+    <string name="Makam">ألصلاه عند المقام</string>
+    <string name="Tawaf">الطواف           </string>
+    <string name="Eltahalol">التحلل           </string>
+</resources>

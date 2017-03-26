@@ -30,7 +30,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:background="#5051ebff"
+                android:background="#50ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
@@ -38,7 +38,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#9994ff51"
+                    android:background="#99323332"
                     android:orientation="horizontal"
                     android:padding="16dp"
                     tools:layout_editor_absoluteX="8dp"
@@ -50,6 +50,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:layout_weight="1"
+                        android:textColor="#ffffff"
                         android:text="City"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="349dp"
@@ -71,11 +72,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Fagr"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="8dp"
                         tools:layout_editor_absoluteY="77dp" />
 
                     <TextView
+                        android:textColor="#010813"
                         android:id="@+id/f7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -98,6 +101,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Sunrise"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="325dp"
                         tools:layout_editor_absoluteY="123dp" />
@@ -108,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="طلوع الشمس"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="49dp"
                         tools:layout_editor_absoluteY="123dp" />
                 </LinearLayout>
@@ -124,6 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Duhr"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="343dp"
                         tools:layout_editor_absoluteY="173dp" />
@@ -134,6 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="الظهر"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="57dp"
                         tools:layout_editor_absoluteY="173dp" />
 
@@ -151,6 +158,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Asr"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="352dp"
                         tools:layout_editor_absoluteY="221dp" />
@@ -161,6 +169,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="العصر"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="55dp"
                         tools:layout_editor_absoluteY="221dp" />
 
@@ -178,6 +187,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Sunset"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="329dp"
                         tools:layout_editor_absoluteY="269dp" />
@@ -188,6 +198,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="غروب الشمس"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="57dp"
                         tools:layout_editor_absoluteY="269dp" />
 
@@ -205,6 +216,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Maghrib"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="318dp"
                         tools:layout_editor_absoluteY="318dp" />
@@ -215,6 +227,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="المغرب"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="53dp"
                         tools:layout_editor_absoluteY="318dp" />
 
@@ -232,6 +245,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="isha"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="348dp"
                         tools:layout_editor_absoluteY="366dp" />
@@ -242,6 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="العشاء"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="52dp"
                         tools:layout_editor_absoluteY="366dp" />
                 </LinearLayout>
@@ -258,6 +273,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Midnight"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="315dp"
                         tools:layout_editor_absoluteY="464dp" />
@@ -268,6 +284,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="منتصف الليل"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="53dp"
                         tools:layout_editor_absoluteY="464dp" />
                 </LinearLayout>
@@ -284,6 +301,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="imsak"
+                        android:textColor="#010813"
                         android:textSize="16sp"
                         tools:layout_editor_absoluteX="335dp"
                         tools:layout_editor_absoluteY="414dp" />
@@ -294,6 +312,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="الإمساك"
+                        android:textColor="#010813"
                         tools:layout_editor_absoluteX="57dp"
                         tools:layout_editor_absoluteY="414dp" />
                 </LinearLayout>

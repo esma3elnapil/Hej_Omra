@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+       
         <LinearLayout
             android:paddingTop="40dp"
             android:weightSum="2"
@@ -172,7 +172,7 @@
                     android:id="@+id/another"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/more" />
+                    android:background="@drawable/muslimpray" />
 
                 <TextView
                     android:textColor="#01312b"
