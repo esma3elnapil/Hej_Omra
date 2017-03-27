@@ -16,9 +16,9 @@ import android.widget.Toast;
 public class ElOmraActivity extends AppCompatActivity implements View.OnClickListener
 {
 
-   private ImageView EhramimageView,MasjedimageView,TawafimageView,MakamimageView,AlsaeyimageView,TahalolimageView;
-   private TextView EhramtextView,MasjedtextView,TawaftextView,MakamtextView,AlsaeytextView,TahaloltextView;
-   private CheckBox EhramcheckBox,MasjedcheckBox,TawafcheckBox,MakamcheckBox,AlsaeycheckBox,TahalolcheckBox;
+    private ImageView EhramimageView,MasjedimageView,TawafimageView,MakamimageView,AlsaeyimageView,TahalolimageView;
+    private TextView EhramtextView,MasjedtextView,TawaftextView,MakamtextView,AlsaeytextView,TahaloltextView;
+    private CheckBox EhramcheckBox,MasjedcheckBox,TawafcheckBox,MakamcheckBox,AlsaeycheckBox,TahalolcheckBox;
     Typeface font;
     SharedPreferences Pref;
 
@@ -179,14 +179,14 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("EhramDone",true);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter +1;
                     progressBar.setProgress(ProgressCounter);
                 }else if (!EhramcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("EhramDone",false);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter -1;
                     progressBar.setProgress(ProgressCounter);
                 }
@@ -202,18 +202,18 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.MasjedcheckBox:
-                if (EhramcheckBox.isChecked()){
+                if (MasjedcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("MasjedDone",true);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter +1;
                     progressBar.setProgress(ProgressCounter);
-                }else if (!EhramcheckBox.isChecked()){
+                }else if (!MasjedcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("MasjedDone",false);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter -1;
                     progressBar.setProgress(ProgressCounter);
                 }
@@ -229,18 +229,18 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.TawafcheckBox:
-                if (EhramcheckBox.isChecked()){
+                if (TawafcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("TawafDone",true);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter +1;
                     progressBar.setProgress(ProgressCounter);
-                }else if (!EhramcheckBox.isChecked()){
+                }else if (!TawafcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("TawafDone",false);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter -1;
                     progressBar.setProgress(ProgressCounter);
                 }
@@ -256,18 +256,18 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.MakamcheckBox:
-                if (EhramcheckBox.isChecked()){
+                if (MakamcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("MakamDone",true);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter +1;
                     progressBar.setProgress(ProgressCounter);
-                }else if (!EhramcheckBox.isChecked()){
+                }else if (!MakamcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("MakamDone",false);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter -1;
                     progressBar.setProgress(ProgressCounter);
                 }
@@ -283,18 +283,18 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.AlsaeycheckBox:
-                if (EhramcheckBox.isChecked()){
+                if (AlsaeycheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("AlsaeyDone",true);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter +1;
                     progressBar.setProgress(ProgressCounter);
-                }else if (!EhramcheckBox.isChecked()){
+                }else if (!AlsaeycheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("AlsaeyDone",false);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter -1;
                     progressBar.setProgress(ProgressCounter);
                 }
@@ -310,18 +310,18 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.TahalolcheckBox:
-                if (EhramcheckBox.isChecked()){
+                if (TahalolcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("TahalolDone",true);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter +1;
                     progressBar.setProgress(ProgressCounter);
-                }else if (!EhramcheckBox.isChecked()){
+                }else if (!TahalolcheckBox.isChecked()){
                     SharedPreferences sharedPreferences =getSharedPreferences("OmraSteps",0);
                     SharedPreferences.Editor editor= sharedPreferences.edit();
                     editor.putBoolean("TahalolDone",false);
-                    editor.commit();
+                    editor.apply();
                     ProgressCounter = ProgressCounter -1;
                     progressBar.setProgress(ProgressCounter);
                 }
