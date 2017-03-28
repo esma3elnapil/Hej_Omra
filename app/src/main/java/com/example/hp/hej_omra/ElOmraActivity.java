@@ -3,9 +3,11 @@ package com.example.hp.hej_omra;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -18,6 +20,7 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
     Typeface font;
     SharedPreferences Pref;
     int ProgressCounter = 0;
+    private Button ResetButton;
     private ImageView EhramimageView, MasjedimageView, TawafimageView, MakamimageView, AlsaeyimageView, TahalolimageView;
     private TextView EhramtextView, MasjedtextView, TawaftextView, MakamtextView, AlsaeytextView, TahaloltextView;
     private CheckBox EhramcheckBox, MasjedcheckBox, TawafcheckBox, MakamcheckBox, AlsaeycheckBox, TahalolcheckBox;
@@ -119,6 +122,7 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
+        ResetButton = (Button)findViewById(R.id.ResetButton);
         EhramimageView = (ImageView) findViewById(R.id.EhramimageView);
         MasjedimageView = (ImageView) findViewById(R.id.MasjedimageView);
         TawafimageView = (ImageView) findViewById(R.id.TawafimageView);
@@ -144,6 +148,8 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
         MakamtextView.setOnClickListener(this);
         AlsaeytextView.setOnClickListener(this);
         TahaloltextView.setOnClickListener(this);
+        ResetButton.setOnClickListener(this);
+
 
         EhramtextView.setTypeface(font);
         MasjedtextView.setTypeface(font);
@@ -151,6 +157,8 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
         MakamtextView.setTypeface(font);
         AlsaeytextView.setTypeface(font);
         TahaloltextView.setTypeface(font);
+
+        ResetButton.setTypeface(font);
 
         EhramcheckBox = (CheckBox) findViewById(R.id.EhramcheckBox);
         MasjedcheckBox = (CheckBox) findViewById(R.id.MasjedcheckBox);
@@ -172,6 +180,10 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            //------------------------------ Reset Button
+            case R.id.ResetButton:
+                ResetProgress();
+                break;
             //------------------------------ Ehram
             case R.id.EhramimageView:
                 startActivity(new Intent(ElOmraActivity.this, AlEhramActivity.class));
@@ -308,6 +320,18 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
                 break;
         }
 
+    }
+
+    private void ResetProgress() {
+        PutBooleanIntoSharedPref("EhramDone", false);
+        PutBooleanIntoSharedPref("MasjedDone", false);
+        PutBooleanIntoSharedPref("TawafDone", false);
+        PutBooleanIntoSharedPref("MakamDone", false);
+        PutBooleanIntoSharedPref("AlsaeyDone", false);
+        PutBooleanIntoSharedPref("TahalolDone", false);
+        CheckProgress();
+        ProgressCounter = 0 ;
+        progressBar.setProgress(ProgressCounter);
     }
 
     public void PutBooleanIntoSharedPref(String KEY, boolean TrueOrFalse) {

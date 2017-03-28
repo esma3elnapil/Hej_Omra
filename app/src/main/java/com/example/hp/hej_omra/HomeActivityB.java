@@ -102,7 +102,9 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
             StepstextView.setVisibility(View.VISIBLE);
             StepstextView.setText(String.valueOf(ProgressCounter));
 
-        }else{
+        }else if( ProgressCounter == 0 ){
+            StepstextView.setVisibility(View.INVISIBLE);
+        }else {
             StepstextView.setBackgroundResource(R.drawable.yellowtextviewstyle);
             StepstextView.setVisibility(View.VISIBLE);
             StepstextView.setText(String.valueOf(ProgressCounter));

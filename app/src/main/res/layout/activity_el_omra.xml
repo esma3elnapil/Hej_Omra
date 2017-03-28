@@ -22,7 +22,6 @@
             >
 
             <ProgressBar
-                android:elevation="5dp"
                 android:padding="5dp"
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyleHorizontal"
@@ -271,15 +270,14 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ResetButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:text="Button" />
+        android:layout_margin="16dp"
+        android:background="@drawable/reset" />
 
 
 </RelativeLayout>
