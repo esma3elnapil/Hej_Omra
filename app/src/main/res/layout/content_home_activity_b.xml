@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-       
+
         <LinearLayout
             android:paddingTop="40dp"
             android:weightSum="2"
@@ -28,11 +28,11 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_gravity="center"
                     android:id="@+id/Hej_imv"
-                    android:layout_width="100dp"
-                    android:layout_height="90dp"
-                    android:background="@drawable/haj"/>
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/haj" />
 
                 <TextView
                     android:textColor="#01312b"
@@ -51,12 +51,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-                <ImageView
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
-                    android:id="@+id/Omra_imv"
-                    android:layout_width="100dp"
-                    android:layout_height="90dp"
-                    android:background="@drawable/omra2"/>
+                    >
+
+                    <ImageView
+                        android:id="@+id/Omra_imv"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/omra2" />
+
+                    <TextView
+                        android:id="@+id/StepstextView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:elevation="5dp"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textAlignment="center"
+                        android:textColor="#03112d"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                </FrameLayout>
 
                 <TextView
                     android:textColor="#01312b"
@@ -86,10 +107,10 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_gravity="center"
                     android:id="@+id/azkar_id"
-                    android:layout_width="100dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/prayhand" />
 
                 <TextView
@@ -110,10 +131,10 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_gravity="center"
                     android:id="@+id/meqat_id"
-                    android:layout_width="100dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/mekat" />
 
                 <TextView
@@ -143,10 +164,10 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_gravity="center"
                     android:id="@+id/hotels_id"
-                    android:layout_width="70dp"
-                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/hotel3" />
 
                 <TextView
@@ -167,11 +188,11 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
                     android:id="@+id/another"
                     android:layout_width="80dp"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/muslimpray" />
 
                 <TextView

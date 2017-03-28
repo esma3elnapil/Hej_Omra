@@ -1,6 +1,8 @@
 package com.example.hp.hej_omra;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -25,12 +27,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class HomeActivityB extends AppCompatActivity implements View.OnClickListener {
-    private ImageView Hej, Omra, Azkar, Meqat, Hotels, TimeImageView,prayImageView;
-    private TextView hejtv, omratv, azkartv, meqattv, hoteltv, anothertv, CityTv, TimeTv;
+    private ImageView Hej, Omra, Azkar, Meqat, Hotels,prayImageView;
+    private TextView hejtv, omratv, azkartv, meqattv, hoteltv, anothertv , StepstextView;
 
     Typeface font;
-
-    RequestQueue queue; //
+    SharedPreferences Pref;
+    int ProgressCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,75 +42,77 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         setSupportActionBar(toolbar);
 
         inti();
-        TimeAndCityVolleyRequest();
+        CheckProgress();
 
     }
 
-    private void TimeAndCityVolleyRequest() {
-        final String url = "http://api.aladhan.com/timingsByCity?city=Makkah&country=sudia&method=4";
-
-        // prepare the Request
-        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        // display response
-                        try {
-                            JSONObject jsonObject = response.getJSONObject("data");
-
-                                     JSONObject timings = jsonObject.getJSONObject("timings");
-
-                            String Fajr = timings.getString("Fajr");
-                            String Sunrise = timings.getString("Sunrise");
-                            String Duhr = timings.getString("Duhr");
-                            String Asr = timings.getString("Asr");
-                            String Sunset = timings.getString("Sunset");
-                            String Maghrib = timings.getString("Maghrib");
-                            String Isha = timings.getString("Isha");
-                            String Imsak = timings.getString("Imsak");
-                            String Midnight = timings.getString("Midnight");
-
-                                     JSONObject date = jsonObject.getJSONObject("date");
-
-                            String readable = date.getString("readable");
-                            String timestamp = date.getString("timestamp");
-
-                            CityTv.setText("City : Makkah"
-                                    +"\n Fajr : "+Fajr
-                                    +"\n Sunrise : "+Sunrise
-                                    + "\n Duhr : "+Duhr
-                                    + "\n Asr : "+Asr
-                                    + "\n Sunset : "+Sunset
-                                    + "\n Maghrib : "+Maghrib
-                                    + "\n Isha : "+Isha
-                                    + "\n Imsak : "+Imsak
-                                    + "\n Midnight : "+Midnight);
-                            TimeTv.setText(readable);
-                            Toast.makeText(getApplicationContext(),Fajr.toString(),Toast.LENGTH_LONG).show();
-
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),"Error.Response :"+error.toString(),Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
-
-        //34an myrg34 results 2dema
-        getRequest.setShouldCache(false);
-        // add it to the RequestQueue
-        queue.add(getRequest);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        CheckProgress();
     }
+
+    private void CheckProgress(){
+        ProgressCounter = 0 ;
+        Pref = getSharedPreferences("OmraSteps", 0);
+        if (Pref.contains("EhramDone")) {
+            boolean EhramDone = Pref.getBoolean("EhramDone", false);
+            if (EhramDone) {
+                ProgressCounter = ProgressCounter + 1;
+            }
+        }
+
+        if (Pref.contains("MasjedDone")) {
+            boolean MasjedDone = Pref.getBoolean("MasjedDone", false);
+            if (MasjedDone) {
+                ProgressCounter = ProgressCounter + 1;
+            }
+        }
+
+
+        if (Pref.contains("TawafDone")) {
+            boolean TawafDone = Pref.getBoolean("TawafDone", false);
+            if (TawafDone) {
+                ProgressCounter = ProgressCounter + 1;
+            }
+        }
+
+        if (Pref.contains("MakamDone")) {
+            boolean MakamDone = Pref.getBoolean("MakamDone", false);
+            if (MakamDone) {
+                ProgressCounter = ProgressCounter + 1;
+            }
+        }
+
+        if (Pref.contains("AlsaeyDone")) {
+            boolean AlsaeyDone = Pref.getBoolean("AlsaeyDone", false);
+            if (AlsaeyDone) {
+                ProgressCounter = ProgressCounter + 1;
+            }
+        }
+
+        if (Pref.contains("TahalolDone")) {
+            boolean TahalolDone = Pref.getBoolean("TahalolDone", false);
+            if (TahalolDone){
+                ProgressCounter = ProgressCounter + 1;
+            }
+        }
+        if (ProgressCounter == 6){
+        StepstextView.setBackgroundResource(R.drawable.greentextviewstyle);
+            StepstextView.setVisibility(View.VISIBLE);
+            StepstextView.setText(String.valueOf(ProgressCounter));
+
+        }else{
+            StepstextView.setBackgroundResource(R.drawable.yellowtextviewstyle);
+            StepstextView.setVisibility(View.VISIBLE);
+            StepstextView.setText(String.valueOf(ProgressCounter));
+        }
+
+
+    }
+
 
     private void inti() {
-        queue = Volley.newRequestQueue(this);
 
         font = Typeface.createFromAsset(getAssets(), "fonts/jazel.ttf");
 
@@ -118,6 +122,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         meqattv = (TextView) findViewById(R.id.meqattv);
         hoteltv = (TextView) findViewById(R.id.hoteltv);
         anothertv = (TextView) findViewById(R.id.anothertv);
+        StepstextView=(TextView)findViewById(R.id.StepstextView);
 
         hejtv.setTypeface(font);
         omratv.setTypeface(font);
