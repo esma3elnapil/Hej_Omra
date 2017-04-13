@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg2"
     tools:context="com.example.hp.hej_omra.AlSaeyActivity">
     <RelativeLayout
         android:layout_alignParentBottom="true"
@@ -18,9 +19,11 @@
 
             android:layout_centerHorizontal="true"
             android:text="@string/sttart"
+            android:background="#36acba"
             style="@style/fontForHeads"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <!--
         <Button
             android:id="@+id/saeyDone"
             android:text="@string/done"
@@ -28,6 +31,7 @@
             android:layout_below="@+id/saeyStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+            -->
     </RelativeLayout>
 
 </RelativeLayout>

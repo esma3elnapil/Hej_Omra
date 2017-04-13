@@ -12,7 +12,7 @@ public class AlTahlolActivity extends AppCompatActivity implements View.OnClickL
 {
     ImageView TahlolImV;
     TextView TahlolTV;
-    Button TahlolDone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,11 +23,11 @@ public class AlTahlolActivity extends AppCompatActivity implements View.OnClickL
     }
     private void TahlolInti()
     {
-        TahlolDone= (Button) findViewById(R.id.Tahlol_Done);
+
         TahlolImV= (ImageView) findViewById(R.id.Tahlol_Im);
         TahlolTV= (TextView) findViewById(R.id.Tahlol_Tv);
 
-        TahlolDone.setOnClickListener(this);
+
 
     }
 
@@ -58,13 +58,7 @@ public class AlTahlolActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view)
     {
-        switch (view.getId())
-        {
-            case R.id.Tahlol_Done:
-                ShowDialog();
-                break;
 
-        }
 
     }
 }

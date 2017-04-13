@@ -1,7 +1,7 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -18,7 +18,7 @@
     <!--   style for the subject       -->
     <style name="fontForsubject">
         <item name="android:textStyle">normal</item>
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">sans-serif-light</item>
         <item name="android:textColor">#333333</item>
         <item name="android:textSize">20sp</item>
         <item name="android:padding">2dip</item>

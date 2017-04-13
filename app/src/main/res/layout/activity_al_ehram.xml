@@ -2,6 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_al_ehram"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,137 +11,28 @@
     android:background="@drawable/bg2"
     tools:context="com.example.hp.hej_omra.AlEhramActivity">
 
-    <ScrollView
+    <!-- our toolbar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#50ffffff">
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#50ffffff"
-            android:orientation="vertical">
+    <!-- our tablayout to display tabs  -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/Tv1"
-                    style="@style/fontForHeads"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/howihram"
-                    android:textColor="#010813" />
-
-                <ImageView
-                    android:id="@+id/H_Ihram_im"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@+id/Tv1"
-                    android:layout_marginTop="10dp"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-                    android:id="@+id/H_Ihram_tv"
-
-                    style="@style/fontForsubject"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/Tv1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/H_Ihram_im"
-                    android:hint="Fh jehi ufhwncj \nfeijwiu eoiwo ipof\
-nwofow pej jwfiof"
-                    android:inputType="textMultiLine"
-                    android:textColor="#010813" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/Tv2"
-                    style="@style/fontForHeads"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/allowinihram"
-                    android:textColor="#010813" />
-
-                <ImageView
-                    android:id="@+id/AllowIn_Ihram_im"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@+id/Tv2"
-                    android:layout_marginTop="10dp"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-                    android:id="@+id/AllowIn_Ihram_tv"
-
-                    style="@style/fontForsubject"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/Tv2"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/AllowIn_Ihram_im"
-                    android:hint="fhjehiufhwncj\nfeijwiueoiwoipof\nwofowpejjwfiof"
-                    android:inputType="textMultiLine"
-                    android:textColor="#010813" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/Tv3"
-                    style="@style/fontForHeads"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/notallowinihram"
-                    android:textColor="#010813" />
-
-                <ImageView
-                    android:id="@+id/NotAllowIn_Ihram_im"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@+id/Tv3"
-                    android:layout_marginTop="10dp"
-                    android:src="@mipmap/ic_launcher" />
-
-                <TextView
-                    android:id="@+id/NotAllowIn_Ihram_tv"
-
-                    style="@style/fontForsubject"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/Tv3"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/NotAllowIn_Ihram_im"
-                    android:hint="fhjehiufhwncj\nfeijwiueoiwoipof\nwofowpejjwfiof"
-                    android:inputType="textMultiLine"
-                    android:textColor="#010813" />
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/bt"
-                style="@style/fontForHeads"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/done" />
-
-
-        </LinearLayout>
-    </ScrollView>
+    <!-- View pager to swipe views -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
 </LinearLayout>

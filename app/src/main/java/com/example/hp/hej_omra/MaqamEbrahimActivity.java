@@ -12,7 +12,7 @@ public class MaqamEbrahimActivity extends AppCompatActivity implements View.OnCl
 {
     TextView Maqam_Tv;
     ImageView Maqam_Im;
-    Button MaqamDone;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,8 +21,8 @@ public class MaqamEbrahimActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_maqam_ebrahim);
         Maqam_Im= (ImageView) findViewById(R.id.Maqam_Im);
         Maqam_Tv= (TextView) findViewById(R.id.Maqam_Tv);
-        MaqamDone= (Button) findViewById(R.id.Maqam_DoneBt);
-        MaqamDone.setOnClickListener(this);
+
+
 
     }
 
@@ -31,9 +31,7 @@ public class MaqamEbrahimActivity extends AppCompatActivity implements View.OnCl
     {
         switch (view.getId())
         {
-            case R.id.Maqam_DoneBt:
-                startActivity(new Intent(MaqamEbrahimActivity.this,AlSaeyActivity.class));
-                break;
+
 
         }
 

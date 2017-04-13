@@ -155,6 +155,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.Hej_imv:
+                startActivity(new Intent(HomeActivityB.this,AlHejActivity.class));
                 break;
 
             case R.id.Omra_imv:

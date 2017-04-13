@@ -18,9 +18,11 @@
         android:id="@+id/twafStart"
         android:layout_centerHorizontal="true"
         android:text="@string/sttart"
+        android:background="#36acba"
         style="@style/fontForHeads"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/tawafDone"
         android:text="@string/done"
@@ -28,6 +30,7 @@
         android:layout_below="@+id/twafStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
     </RelativeLayout>
 
     <ProgressBar

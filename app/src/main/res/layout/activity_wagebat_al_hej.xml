@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg2"
+    tools:context="com.example.hp.hej_omra.WagebatAlHejActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/ihramFmeqatimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ihram" />
+            <TextView
+                android:id="@+id/ihramFmeqattextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/iharamFromMekat"
+                android:textColor="#010813" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/WArafaNightimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/arafa" />
+            <TextView
+                android:id="@+id/WArafaNighttextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wokofarafaTillNight"
+                android:textColor="#010813" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/mabeetmozdlafaimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/mozalfa" />
+            <TextView
+                android:id="@+id/mabeetMozdalfatextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mabeetBmozdalifa"
+                android:textColor="#010813" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/mabeetBmannaimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/menna" />
+            <TextView
+                android:id="@+id/mabeetBmannatextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mabeetBmenna"
+                android:textColor="#010813" />
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/ramiGamratimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gamarat" />
+            <TextView
+                android:id="@+id/ramiGamarattextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/ramigamarat"
+                android:textColor="#010813" />
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/HalqTaqseerimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/halq" />
+            <TextView
+                android:id="@+id/HalqTaqseertextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/halqWtaqser"
+                android:textColor="#010813" />
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <ImageView
+                android:id="@+id/TawafWadaaimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ifada" />
+            <TextView
+                android:id="@+id/tawafWadaatextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tawafelwadaa"
+                android:textColor="#010813" />
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

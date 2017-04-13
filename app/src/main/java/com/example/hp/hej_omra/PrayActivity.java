@@ -39,7 +39,17 @@ public class PrayActivity extends AppCompatActivity implements View.OnClickListe
                 , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //hide action bar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        try {
+            actionBar.hide();
+        } catch (Exception e) {
+            e.printStackTrace();
+            try {
+                actionBar.hide();
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+
+        }
         //set content view AFTER ABOVE sequence (to avoid crash)
         setContentView(R.layout.activity_pray);
 

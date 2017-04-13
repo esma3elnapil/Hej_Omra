@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
                 , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //hide action bar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+      //  ActionBar actionBar = getSupportActionBar();
+       // actionBar.hide();
         //set content view AFTER ABOVE sequence (to avoid crash)
         setContentView(R.layout.activity_main);
 

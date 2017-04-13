@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg2"
+    tools:context="com.example.hp.hej_omra.ArkanAlHejActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:padding="5dp"
+            android:background="#36acba"
+            android:id="@+id/AlhejprogressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/ihramimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ihram" />
+            <TextView
+                android:id="@+id/iharmtextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/aleharm"
+                android:textColor="#010813" />
+            <CheckBox
+
+                android:id="@+id/ihramcheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/wokofArafaimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/arafa" />
+            <TextView
+                android:id="@+id/wokofArafatextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wquofArafa"
+                android:textColor="#010813" />
+            <CheckBox
+
+                android:id="@+id/wokofArafacheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/tawafIfadaimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ifada" />
+            <TextView
+                android:id="@+id/tawafIfadatextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tawfEfada"
+                android:textColor="#010813" />
+            <CheckBox
+
+                android:id="@+id/tawafIfadacheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#40ffffff"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/saeeyimageView"
+                android:layout_width="15dp"
+                android:layout_height="90dp"
+
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/saeey" />
+            <TextView
+                android:id="@+id/saeeytextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Saeey"
+                android:textColor="#010813" />
+            <CheckBox
+
+                android:id="@+id/saeeycheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="left" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/ResetHejButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/reset" />
+
+
+</RelativeLayout>

@@ -38,7 +38,14 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".PrayActivity"></activity>
+        <activity android:name=".PrayActivity" />
+        <activity android:name=".AlHejActivity" />
+        <activity android:name=".ArkanAlHejActivity" />
+        <activity android:name=".WagebatAlHejActivity" />
+        <activity android:name=".SunnAlHejActivity" />
+        <activity android:name=".MahzuratAlHejActivity" />
+        <activity android:name=".AlHadiActivity" />
+        <activity android:name=".AnwaaAlHejActivity"></activity>
     </application>
 
 </manifest>

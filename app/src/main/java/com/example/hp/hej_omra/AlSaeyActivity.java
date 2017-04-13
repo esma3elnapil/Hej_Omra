@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class AlSaeyActivity extends AppCompatActivity  implements View.OnClickListener
 {
-    Button SaeyStart,SaeyDone;
+    Button SaeyStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,9 +21,9 @@ public class AlSaeyActivity extends AppCompatActivity  implements View.OnClickLi
 
     private void SaeyInti()
     {
-        SaeyDone= (Button) findViewById(R.id.saeyDone);
+
         SaeyStart= (Button) findViewById(R.id.saeyStart);
-        SaeyDone.setOnClickListener(this);
+
         SaeyStart.setOnClickListener(this);
 
     }
@@ -33,9 +33,6 @@ public class AlSaeyActivity extends AppCompatActivity  implements View.OnClickLi
     {
         switch (view.getId())
         {
-            case R.id.saeyDone:
-                startActivity(new Intent(AlSaeyActivity.this,AlTahlolActivity.class));
-                break;
             case R.id.saeyStart:
                 break;
 

@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg2"
 
     tools:context="com.example.hp.hej_omra.E_MosqueActivity">
     <LinearLayout
@@ -15,38 +16,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
-            android:text="@string/mosquedoaa"
+            android:text="@string/enteringmousq"
             style="@style/fontForHeads"
             android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/E_M_tv"
-            android:inputType="textMultiLine"
-            android:hint="jhfdsuhfiufis\nojfiofjuhf\nohaioofiu\n"
-            style="@style/fontForsubject"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <ImageView
             android:id="@+id/E_M_ImV"
             android:layout_marginTop="10dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/emosque"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
+        <TextView
+            android:id="@+id/E_M_tv"
+            android:inputType="textMultiLine"
+            android:text="@string/doaa"
+            style="@style/fontForsubject"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
 
 
 
     </LinearLayout>
+    <!--
     <Button
         android:id="@+id/mosque_doneBT"
         android:text="@string/done"
         style="@style/fontForHeads"
+        android:background="#36acba"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+        -->
 
 </RelativeLayout>

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Hej_Omra</string>
-    <string name="howihram">How Ihram</string>
-    <string name="allowinihram">Allowed In Ihram</string>
-    <string name="notallowinihram">Not Allowed In Ihram</string>
+    <string name="howihram">كيفيه الإحرام</string>
+    <string name="allowinihram">مسموحات الإحرام</string>
+    <string name="notallowinihram">محظورات الإحرام</string>
     <string name="done">Done</string>
     <string name="amen">Amen</string>
     <string name="mosquedoaa">Mosque Doaa</string>
@@ -19,13 +19,86 @@
         <item>السعي</item>
         <item>التحلل</item>
     </string-array>
+
+
+    <string-array name="mahzuratList">
+        <item>حلق الشعر</item>
+        <item>تقليم الأظافر</item>
+        <item>تغطيه الرأس</item>
+        <item>لبس الراجل للمخيط</item>
+        <item>التطيب</item>
+        <item>قتل الصيد</item>
+        <item>عقد النكاح</item>
+    </string-array>
+    <string-array name="mosthbatIhram">
+        <item>تقليم الظافر</item>
+        <item>تسريح الشعر</item>
+        <item>لبس ملابس الإحرام</item>
+        <item>الإغتسال</item>
+        <item>حلق الشعر الزائد وقص شعر الرأس والآخذ من الشارب</item>
+        <item>تطيب البدن لا الملابس</item>
+        <item>عقد نيه الإحرام بعد صلاه مكتوبه</item>
+        <item>التلبيه(لبيك اللهم لبيك,لبيك لا شريك لك لبيك,غن الحمد والنعمه لك والملك لا شريك لك).</item>
+
+    </string-array>
+
+    <string-array name="ArkanAlhej">
+        <item>الإحرام</item>
+        <item>الوقوف بعرفه</item>
+        <item>طواف الإفاضه</item>
+        <item>السعى</item>
+    </string-array>
+    <string-array name="sunnArray">
+        <item>الإغتسال قبل الإحرام </item>
+        <item>الإحرام فى إزرار أبيض</item>
+        <item>التلبيه ورفع الصوت</item>
+        <item>المبيت بمنى ليله عرفه</item>
+        <item>تقبيل الحجر الأسود</item>
+        <item>الإضطباع (جعل الرداء تحت الإبط الأيمن فى طواف القدوم أو العمره)</item>
+        <item>الرمل(الإسراع فى الأشواط الثلاثه اللأولى من طواف القدوم أو العمره)</item>
+        <item>طواف القدوم للقارن والمفرد</item>
+
+    </string-array>
+
     <string name="title_activity_home_b">Home</string>
 
     <string name="action_settings">Settings</string>
     <string name="Ehram">الإحرام          </string>
     <string name="enteringmousq">دخول المسجد      </string>
     <string name="Alsaey">السعي           </string>
-    <string name="Makam">ألصلاه عند المقام</string>
+    <string name="Makam">ألصلاه عند مقام إبراهيم </string>
     <string name="Tawaf">الطواف           </string>
-    <string name="Eltahalol">التحلل           </string>
+    <string name="Eltahalol">التحلل من الإحرام          </string>
+    <string name="ArkanAlhej">أركان الحج           </string>
+    <string name="WagebatAlhej"> واجبات الحج           </string>
+    <string name="SunnAlhej"> سنن الحج           </string>
+    <string name="MahzuratAlhej"> محظورات الحج           </string>
+    <string name="alhadi"> الهدى           </string>
+    <string name="AnwaaAlhej"> أنواع الحج           </string>
+    <string name="aleharm">  الإحرام           </string>
+    <string name="wquofArafa">          الوقوف بعرفه  </string>
+    <string name="tawfEfada">     طواف الإفاضه       </string>
+    <string name="Saeey">    السعى بين الصفا والمروه       </string>
+
+    <string name="iharamFromMekat">الإحرام من الميقات</string>
+    <string name="wokofarafaTillNight">الوقوف بعرفه الى الليل</string>
+    <string name="mabeetBmozdalifa">المبيت بمزدلفه</string>
+    <string name="mabeetBmenna">المبيت بمنى ليالى أيام التشريق</string>
+    <string name="ramigamarat">رمى الجمرات</string>
+    <string name="halqWtaqser">الحلق أوالتقصير</string>
+    <string name="tawafelwadaa">طواف الوداع</string>
+    <string name="tahlol">يحلق الرّجل رأسه أو يقصّر، والمرأة تقصّر من كلّ قرن بمقدار أنملة، والأنملة هي رأس الأصبع.</string>
+    <string name="pray">وَاتَّخِذُواْ مِن مَّقَامِ إِبْرَاهِيمَ مُصَلًّى "، ويُصلِّي  ركعتين خلف المقام إن استطاع ذلك، وإن لم يستطع ذلك فإنّه يصلي في أيّ مكان من المسجد.</string>
+   <string name="doaa">أعوذ بالله العظيم, وبوجهه الكريم وسلطانه القديم من الشيطان الرجيم, بسم الله,اللهم صلى على محمد وآله وسلم ,اللهم أغفر لى ذنوبى افتح لى أبواب رجمتك</string>
+
+
+
+    <string name="ff">كيفية الإحرام للرجال\n
+
+\nيغتسل، ويلبس ثوبي إحرامه: يأتزر بأحدهما ويتوشح بالآخر او يرتدي به.
+\n
+\nكيفية الإحرام للنساء
+\n
+\nالمرأة تُحرم في لباسها ويُفضّل أنْ يكون هذا اللباس فضفاضاً لا يصف ولا يشف ما تحته من المفاتن، كما يجب ألا يكون لباس المرأة ملفتاً للأنظار بلونه أو تفصيلته أو منظره، وتُسبل المرأة ثوبها على سائر جسدها وتغطي رأسها وصدرها بما يستر ستراً كاملاً.
+</string>
 </resources>
