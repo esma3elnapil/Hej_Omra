@@ -2,37 +2,24 @@ package com.example.hp.hej_omra;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class HomeActivityB extends AppCompatActivity implements View.OnClickListener {
     private ImageView Hej, Omra, Azkar, Meqat, Hotels,prayImageView;
-    private TextView hejtv, omratv, azkartv, meqattv, hoteltv, anothertv , StepstextView;
+    private TextView hejtv, omratv, azkartv, meqattv, hoteltv, anothertv , OmraStepstextView,HejStepstextView;
 
     Typeface font;
-    SharedPreferences Pref;
-    int ProgressCounter = 0;
+    private SharedPreferences OmraPref , HejPref;
+    private int OmraProgressCounter = 0 ;
+    private int HejProgressCounter = 0 ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,63 +40,106 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
     }
 
     private void CheckProgress(){
-        ProgressCounter = 0 ;
-        Pref = getSharedPreferences("OmraSteps", 0);
-        if (Pref.contains("EhramDone")) {
-            boolean EhramDone = Pref.getBoolean("EhramDone", false);
+        OmraProgressCounter = 0 ;
+        HejProgressCounter = 0 ;
+
+        OmraPref = getSharedPreferences("OmraSteps", 0);
+        HejPref = getSharedPreferences("HejSteps", 0);
+        //------------------------------------------------ Omra
+        if (OmraPref.contains("EhramDone")) {
+            boolean EhramDone = OmraPref.getBoolean("EhramDone", false);
             if (EhramDone) {
-                ProgressCounter = ProgressCounter + 1;
+                OmraProgressCounter = OmraProgressCounter + 1;
             }
         }
 
-        if (Pref.contains("MasjedDone")) {
-            boolean MasjedDone = Pref.getBoolean("MasjedDone", false);
+        if (OmraPref.contains("MasjedDone")) {
+            boolean MasjedDone = OmraPref.getBoolean("MasjedDone", false);
             if (MasjedDone) {
-                ProgressCounter = ProgressCounter + 1;
+                OmraProgressCounter = OmraProgressCounter + 1;
             }
         }
 
 
-        if (Pref.contains("TawafDone")) {
-            boolean TawafDone = Pref.getBoolean("TawafDone", false);
+        if (OmraPref.contains("TawafDone")) {
+            boolean TawafDone = OmraPref.getBoolean("TawafDone", false);
             if (TawafDone) {
-                ProgressCounter = ProgressCounter + 1;
+                OmraProgressCounter = OmraProgressCounter + 1;
             }
         }
 
-        if (Pref.contains("MakamDone")) {
-            boolean MakamDone = Pref.getBoolean("MakamDone", false);
+        if (OmraPref.contains("MakamDone")) {
+            boolean MakamDone = OmraPref.getBoolean("MakamDone", false);
             if (MakamDone) {
-                ProgressCounter = ProgressCounter + 1;
+                OmraProgressCounter = OmraProgressCounter + 1;
             }
         }
 
-        if (Pref.contains("AlsaeyDone")) {
-            boolean AlsaeyDone = Pref.getBoolean("AlsaeyDone", false);
+        if (OmraPref.contains("AlsaeyDone")) {
+            boolean AlsaeyDone = OmraPref.getBoolean("AlsaeyDone", false);
             if (AlsaeyDone) {
-                ProgressCounter = ProgressCounter + 1;
+                OmraProgressCounter = OmraProgressCounter + 1;
             }
         }
 
-        if (Pref.contains("TahalolDone")) {
-            boolean TahalolDone = Pref.getBoolean("TahalolDone", false);
+        if (OmraPref.contains("TahalolDone")) {
+            boolean TahalolDone = OmraPref.getBoolean("TahalolDone", false);
             if (TahalolDone){
-                ProgressCounter = ProgressCounter + 1;
+                OmraProgressCounter = OmraProgressCounter + 1;
             }
         }
-        if (ProgressCounter == 6){
-        StepstextView.setBackgroundResource(R.drawable.greentextviewstyle);
-            StepstextView.setVisibility(View.VISIBLE);
-            StepstextView.setText(String.valueOf(ProgressCounter));
+        if (OmraProgressCounter == 6){
+        OmraStepstextView.setBackgroundResource(R.drawable.greentextviewstyle);
+            OmraStepstextView.setVisibility(View.VISIBLE);
+            OmraStepstextView.setText(String.valueOf(OmraProgressCounter));
 
-        }else if( ProgressCounter == 0 ){
-            StepstextView.setVisibility(View.INVISIBLE);
+        }else if( OmraProgressCounter == 0 ){
+            OmraStepstextView.setVisibility(View.INVISIBLE);
         }else {
-            StepstextView.setBackgroundResource(R.drawable.yellowtextviewstyle);
-            StepstextView.setVisibility(View.VISIBLE);
-            StepstextView.setText(String.valueOf(ProgressCounter));
+            OmraStepstextView.setBackgroundResource(R.drawable.yellowtextviewstyle);
+            OmraStepstextView.setVisibility(View.VISIBLE);
+            OmraStepstextView.setText(String.valueOf(OmraProgressCounter));
+        }
+        //------------------------------------------- Hej
+        if (HejPref.contains("EhramDone")) {
+            boolean EhramDone = HejPref.getBoolean("EhramDone", false);
+            if (EhramDone) {
+                HejProgressCounter = HejProgressCounter + 1;
+            }
         }
 
+        if (HejPref.contains("WokofArafaDone")) {
+            boolean WokofArafaDone = HejPref.getBoolean("WokofArafaDone", false);
+            if (WokofArafaDone) {
+                HejProgressCounter = HejProgressCounter + 1;
+            }
+        }
+
+        if (HejPref.contains("TawafIfadaDone")) {
+            boolean TawafIfadaDone = HejPref.getBoolean("TawafIfadaDone", false);
+            if (TawafIfadaDone) {
+                HejProgressCounter = HejProgressCounter + 1;
+            }
+        }
+
+        if (HejPref.contains("SaeeyDone")) {
+            boolean SaeeyDone = HejPref.getBoolean("SaeeyDone", false);
+            if (SaeeyDone){
+                HejProgressCounter = HejProgressCounter + 1;
+            }
+        }
+        if (HejProgressCounter == 4){
+            HejStepstextView.setBackgroundResource(R.drawable.greentextviewstyle);
+            HejStepstextView.setVisibility(View.VISIBLE);
+            HejStepstextView.setText(String.valueOf(HejProgressCounter));
+
+        }else if( HejProgressCounter == 0 ){
+            HejStepstextView.setVisibility(View.INVISIBLE);
+        }else {
+            HejStepstextView.setBackgroundResource(R.drawable.yellowtextviewstyle);
+            HejStepstextView.setVisibility(View.VISIBLE);
+            HejStepstextView.setText(String.valueOf(HejProgressCounter));
+        }
 
     }
 
@@ -124,7 +154,8 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
         meqattv = (TextView) findViewById(R.id.meqattv);
         hoteltv = (TextView) findViewById(R.id.hoteltv);
         anothertv = (TextView) findViewById(R.id.anothertv);
-        StepstextView=(TextView)findViewById(R.id.StepstextView);
+        OmraStepstextView =(TextView)findViewById(R.id.OmraStepstextView);
+        HejStepstextView=(TextView)findViewById(R.id.HejStepstextView);
 
         hejtv.setTypeface(font);
         omratv.setTypeface(font);

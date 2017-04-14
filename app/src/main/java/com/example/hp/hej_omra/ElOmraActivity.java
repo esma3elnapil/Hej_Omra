@@ -6,7 +6,10 @@ import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -19,16 +22,20 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
 
     Typeface font;
     SharedPreferences Pref;
-    int ProgressCounter = 0;
+    private int ProgressCounter = 0;
+    private ProgressBar progressBar;
+
     private Button ResetButton;
     private ImageView EhramimageView, MasjedimageView, TawafimageView, MakamimageView, AlsaeyimageView, TahalolimageView;
     private TextView EhramtextView, MasjedtextView, TawaftextView, MakamtextView, AlsaeytextView, TahaloltextView;
     private CheckBox EhramcheckBox, MasjedcheckBox, TawafcheckBox, MakamcheckBox, AlsaeycheckBox, TahalolcheckBox;
-    private ProgressBar progressBar;
 
-    //    int []ListPics={R.drawable.azkar,R.drawable.hej,R.drawable.hotels,R.drawable.meqat,R.drawable.omra,R.drawable.splash};
-    //ListView OmraListView;
-    //    String[]OmraList;
+    private LayoutInflater inflater;
+    private View layout;
+    private ImageView image;
+    private Toast toast;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +44,6 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
         init();
         CheckProgress();
 
-//        OmraListView= (ListView) findViewById(R.id.elomra_lV);
-//        OmraList=getResources().getStringArray(R.array.OmraListView);
-//        OmraListView.setAdapter(new ElOmraCustomAdapter(this,OmraList,ListPics));
 
 
     }
@@ -113,8 +117,25 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
             }
         }
 
-
+        ShowThisToast("You have Finished "+ProgressCounter+" Steps of 6 ");
     }
+
+    private void ShowThisToast(String ToastMessage) {
+        //---------------------- Custome Toast ----------
+        inflater = getLayoutInflater();
+        layout = inflater.inflate(R.layout.toast,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(ToastMessage);
+
+        toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
+        //-----------------------------------------------
+    }
+
 
     private void init() {
 
