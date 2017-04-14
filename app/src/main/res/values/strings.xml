@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Hej_Omra</string>
-    <string name="howihram">كيفيه الإحرام</string>
-    <string name="allowinihram">مسموحات الإحرام</string>
-    <string name="notallowinihram">محظورات الإحرام</string>
+    <string name="howihram">Preparations for Ihram</string>
+    <string name="allowinihram">allowed in ihram</string>
+    <string name="notallowinihram">Prohibitions of Ihram</string>
     <string name="done">Done</string>
     <string name="amen">Amen</string>
     <string name="mosquedoaa">Mosque Doaa</string>
@@ -12,48 +12,64 @@
 
 
     <string-array name="OmraListView">
-        <item>الاحرام</item>
-        <item>دخول المسجد</item>
-        <item>الطواف</item>
-        <item>الصلاه عند المقام</item>
-        <item>السعي</item>
-        <item>التحلل</item>
+        <item>Ihram</item>
+        <item>Entering Masjid al-Haram</item>
+        <item>Tawaaf</item>
+        <item>Praying at the shrine</item>
+        <item>Saey</item>
+        <item>clipping of hair</item>
     </string-array>
 
 
     <string-array name="mahzuratList">
-        <item>حلق الشعر</item>
-        <item>تقليم الأظافر</item>
-        <item>تغطيه الرأس</item>
-        <item>لبس الراجل للمخيط</item>
-        <item>التطيب</item>
-        <item>قتل الصيد</item>
-        <item>عقد النكاح</item>
+        <item>Showing head (men), Showing face (women)</item>
+        <item>Showing the middle bone of the upper part of the feet (Both men and women))</item>
+        <item>Shave / cut hair</item>
+        <item>Cuting nails</item>
+        <item>Wearing perfume</item>
+        <item>Wearing stitched clothing (men) / (Women can wear their ordinay clothes)</item>
+        <item>Hunting / killing</item>
+        <item>Sex</item>
     </string-array>
     <string-array name="mosthbatIhram">
-        <item>تقليم الظافر</item>
-        <item>تسريح الشعر</item>
-        <item>لبس ملابس الإحرام</item>
-        <item>الإغتسال</item>
-        <item>حلق الشعر الزائد وقص شعر الرأس والآخذ من الشارب</item>
-        <item>تطيب البدن لا الملابس</item>
-        <item>عقد نيه الإحرام بعد صلاه مكتوبه</item>
-        <item>التلبيه(لبيك اللهم لبيك,لبيك لا شريك لك لبيك,غن الحمد والنعمه لك والملك لا شريك لك).</item>
-
+        <item>Comb your hair</item>
+        <item>Wearing ihram clothes</item>
+        <item>Taking a shower or wudu</item>
+        <item>Comb your hair, shape the beard, trim your mustache</item>
+        <item>declare your intention after praying</item>
+        <item>TALBIYAH</item>
+        <item>"Labbayk,
+Allahumma Labbayk.
+Labbayk.
+La shareeka laka.
+Labbayk.
+Innal-hamda wan-n'imata
+laka wal-mulk.
+La shareeka lak."</item>
+        <item>(Here we come,
+O Allah, here we come !
+Here we come.
+No partner have You.
+Here we come!
+Praise indeed, and blessings, are Yours---
+the Kingdom too!
+No partner have You!)</item>
     </string-array>
 
     <string-array name="ArkanAlhej">
-        <item>الإحرام</item>
-        <item>الوقوف بعرفه</item>
-        <item>طواف الإفاضه</item>
-        <item>السعى</item>
+        <item>Ihram</item>
+        <item>Waquf Arafat</item>
+        <item>Tawaf alfadah</item>
+        <item>Saey</item>
     </string-array>
     <string-array name="sunnArray">
-        <item>الإغتسال قبل الإحرام </item>
-        <item>الإحرام فى إزرار أبيض</item>
-        <item>التلبيه ورفع الصوت</item>
-        <item>المبيت بمنى ليله عرفه</item>
-        <item>تقبيل الحجر الأسود</item>
+        <item>bathing before Ihram</item>
+        <item>Wear Ihram</item>
+        <item>Talbiyah</item>
+        <item>stay overnight in Minna</item>
+        <item>palms towards Hajre-e-Aswad and say:
+" Bismillahi Allahu Akbar Wa Lilla Hil Hamd "
+and drop your hands down. Now point the palms of your hands again towards Hajar-e- Aswad and kiss them. This act of kissing Hajar-e-Aswad or pointing towards it is called Istilam</item>
         <item>الإضطباع (جعل الرداء تحت الإبط الأيمن فى طواف القدوم أو العمره)</item>
         <item>الرمل(الإسراع فى الأشواط الثلاثه اللأولى من طواف القدوم أو العمره)</item>
         <item>طواف القدوم للقارن والمفرد</item>
@@ -63,19 +79,19 @@
     <string name="title_activity_home_b">Home</string>
 
     <string name="action_settings">Settings</string>
-    <string name="Ehram">الإحرام          </string>
-    <string name="enteringmousq">دخول المسجد      </string>
-    <string name="Alsaey">السعي           </string>
-    <string name="Makam">ألصلاه عند مقام إبراهيم </string>
-    <string name="Tawaf">الطواف           </string>
-    <string name="Eltahalol">التحلل من الإحرام          </string>
-    <string name="ArkanAlhej">أركان الحج           </string>
-    <string name="WagebatAlhej"> واجبات الحج           </string>
+    <string name="Ehram">Ihram          </string>
+    <string name="enteringmousq">Entering Masjid al-Haram</string>
+    <string name="Alsaey">Saey           </string>
+    <string name="Makam">Praying at the shrine</string>
+    <string name="Tawaf">Tawaaf           </string>
+    <string name="Eltahalol">clipping of hair         </string>
+    <string name="ArkanAlhej">Hajj Steps</string>
+    <string name="WagebatAlhej">duties of Hajj            </string>
     <string name="SunnAlhej"> سنن الحج           </string>
     <string name="MahzuratAlhej"> محظورات الحج           </string>
     <string name="alhadi"> الهدى           </string>
-    <string name="AnwaaAlhej"> أنواع الحج           </string>
-    <string name="aleharm">  الإحرام           </string>
+    <string name="AnwaaAlhej">Hajj Types           </string>
+    <string name="aleharm">Ihram           </string>
     <string name="wquofArafa">          الوقوف بعرفه  </string>
     <string name="tawfEfada">     طواف الإفاضه       </string>
     <string name="Saeey">    السعى بين الصفا والمروه       </string>
