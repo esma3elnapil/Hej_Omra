@@ -1,5 +1,6 @@
 package com.example.hp.hej_omra;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ public class ArkanAlHejActivity extends AppCompatActivity implements View.OnClic
     ImageView IhramIM,WokofArafaIM,TawafIfadaIM,SaeeyIM;
     TextView IhramTV,WokofArafaTV,TawafIfadaTV,SaeeyTV;
     Button ResetHej;
+    LinearLayout Ihram_Hej,Wokof_Hej,Tawaf_Hej,Saeey_Hej;
    private ProgressBar AlhejProgress;
 
     private LayoutInflater inflater;
@@ -156,6 +159,16 @@ public class ArkanAlHejActivity extends AppCompatActivity implements View.OnClic
         TawafIfadaIM= (ImageView) findViewById(R.id.tawafIfadaimageView);
         WokofArafaIM= (ImageView) findViewById(R.id.wokofArafaimageView);
 
+        Ihram_Hej= (LinearLayout) findViewById(R.id.ihramHej);
+        Wokof_Hej= (LinearLayout) findViewById(R.id.wokofHej);
+        Tawaf_Hej= (LinearLayout) findViewById(R.id.tawafHej);
+        Saeey_Hej= (LinearLayout) findViewById(R.id.saeeyHej);
+
+        Ihram_Hej.setOnClickListener(this);
+        Wokof_Hej.setOnClickListener(this);
+        Tawaf_Hej.setOnClickListener(this);
+        Saeey_Hej.setOnClickListener(this);
+
 
 
 
@@ -165,6 +178,29 @@ public class ArkanAlHejActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view)
     {
         switch (view.getId()){
+            case R.id.ihramHej:
+                startActivity(new Intent(ArkanAlHejActivity.this,AlEhramActivity.class));
+                break;
+
+            case R.id.tawafHej:
+                startActivity(new Intent(ArkanAlHejActivity.this,AlTawafActivity.class));
+                break;
+
+            case R.id.saeeyHej:
+                startActivity(new Intent(ArkanAlHejActivity.this,AlSaeyActivity.class));
+                break;
+
+            case R.id.wokofHej:
+                startActivity(new Intent(ArkanAlHejActivity.this,WokofArafaActivity.class));
+                break;
+
+
+
+
+
+
+
+
             case R.id.ihramcheckBox:
                 if (IhramCB.isChecked()) {
 

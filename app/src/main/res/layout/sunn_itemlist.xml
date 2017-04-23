@@ -11,6 +11,7 @@
         android:background="#40ffffff"
         android:orientation="horizontal"
         android:weightSum="2">
+        <!--
         <ImageView
             android:id="@+id/sunnimageView"
             android:layout_width="15dp"
@@ -19,14 +20,16 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
              />
+             -->
         <TextView
             android:id="@+id/sunntextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="hhhhhhhhhhhhhhh"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="right"
 
             android:textColor="#010813" />
     </LinearLayout>

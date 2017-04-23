@@ -16,12 +16,12 @@ public class mahzuratCustomAdapter extends BaseAdapter
 {
     String[]MahList;
     Context C;
-    int[]MahPics;
+   // int[]MahPics;
     private static LayoutInflater inflater=null;
-    public mahzuratCustomAdapter( MahzuratAlHejActivity mahzuratAlHejActivities,String[]list,int[]Pics)
+    public mahzuratCustomAdapter( MahzuratAlHejActivity mahzuratAlHejActivities,String[]list)
     {
         MahList=list;
-        MahPics=Pics;
+       // MahPics=Pics;
         C=mahzuratAlHejActivities;
         inflater = (LayoutInflater)C.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -46,9 +46,9 @@ public class mahzuratCustomAdapter extends BaseAdapter
     {
         View rowView = inflater.inflate(R.layout.mahzurat_itemlist, null);
         TextView mahText= (TextView) rowView.findViewById(R.id.mahText);
-        ImageView MahImg= (ImageView) rowView.findViewById(R.id.mahimageView);
+       // ImageView MahImg= (ImageView) rowView.findViewById(R.id.mahimageView);
         mahText.setText(MahList[i]);
-        MahImg.setImageResource(MahPics[i]);
+      //  MahImg.setImageResource(MahPics[i]);
 
         return rowView;
     }

@@ -1,9 +1,11 @@
 package com.example.hp.hej_omra;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -19,6 +21,10 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
     private SharedPreferences OmraPref , HejPref;
     private int OmraProgressCounter = 0 ;
     private int HejProgressCounter = 0 ;
+
+
+    SharedPreferences DataPref;
+    public static final String MY_PREFS_NAME = "MyPrefsFile";
 
 
     @Override
@@ -150,7 +156,7 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
 
         hejtv = (TextView) findViewById(R.id.hjtv);
         omratv = (TextView) findViewById(R.id.omratv);
-        azkartv = (TextView) findViewById(R.id.azkartv);
+       azkartv = (TextView) findViewById(R.id.azkartv);
         meqattv = (TextView) findViewById(R.id.meqattv);
         hoteltv = (TextView) findViewById(R.id.hoteltv);
         anothertv = (TextView) findViewById(R.id.anothertv);
@@ -197,12 +203,19 @@ public class HomeActivityB extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.azkar_id:
+                startActivity(new Intent(HomeActivityB.this,AzkarActivity.class));
                 break;
 
             case R.id.meqat_id:
+                startActivity(new Intent(HomeActivityB.this,AlMekatActivity.class));
                 break;
 
             case R.id.hotels_id:
+
+
+                    startActivity(new Intent(HomeActivityB.this, DataActivity.class));
+
+
                 break;
             case R.id.another:
                 startActivity(new Intent(HomeActivityB.this, PrayActivity.class));

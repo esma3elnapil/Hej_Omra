@@ -45,7 +45,19 @@
         <activity android:name=".SunnAlHejActivity" />
         <activity android:name=".MahzuratAlHejActivity" />
         <activity android:name=".AlHadiActivity" />
-        <activity android:name=".AnwaaAlHejActivity"></activity>
+        <activity android:name=".AnwaaAlHejActivity" />
+        <activity android:name=".AzkarActivity" />
+        <activity android:name=".MorningAzkarActivity" />
+        <activity android:name=".EveningAzkarActivity" />
+        <activity android:name=".SleepingAzkarActivity" />
+        <activity android:name=".PrayingAzkarActivity" />
+        <activity android:name=".ProrheticAdeyaActivity" />
+        <activity android:name=".QuraanAdeyaActivity" />
+        <activity android:name=".ElectronicSebhaActivity" />
+        <activity android:name=".WokofArafaActivity" />
+        <activity android:name=".AlMekatActivity" />
+        <activity android:name=".DataActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
     android:orientation="vertical"
-    tools:context="com.example.hp.hej_omra.MahzuratAlHejActivity">
+    android:background="@drawable/bg2"
+    tools:context="com.example.hp.hej_omra.PrayingAzkarActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -15,11 +15,13 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-    <ListView
-        android:id="@+id/mahzuratList"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerPraying_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </ListView>
+        android:layout_height="match_parent"
+
+        android:scrollbars="vertical"
+        />
 
 </LinearLayout>

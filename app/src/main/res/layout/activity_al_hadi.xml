@@ -7,6 +7,14 @@
     android:orientation="vertical"
     android:background="@drawable/bg2"
     tools:context="com.example.hp.hej_omra.AlHadiActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

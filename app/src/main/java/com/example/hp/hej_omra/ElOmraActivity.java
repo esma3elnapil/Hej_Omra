@@ -48,10 +48,12 @@ public class ElOmraActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private void CheckProgress() {
+    private void CheckProgress()
+    {
         Pref = getSharedPreferences("OmraSteps", 0);
 
-        if (Pref.contains("EhramDone")) {
+        if (Pref.contains("EhramDone"))
+        {
             boolean EhramDone = Pref.getBoolean("EhramDone", false);
             if (EhramDone) {
                 EhramcheckBox.setChecked(true);

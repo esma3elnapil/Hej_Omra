@@ -9,7 +9,7 @@ public class MahzuratAlHejActivity extends AppCompatActivity
 {
     ListView MahzuratListView;
     String[]mahzuArray;
-    int[]mahzuPics={R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun};
+   // int[]mahzuPics={R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun,R.drawable.sun};
 
 
     @Override
@@ -20,6 +20,6 @@ public class MahzuratAlHejActivity extends AppCompatActivity
         setContentView(R.layout.activity_mahzurat_al_hej);
         MahzuratListView= (ListView) findViewById(R.id.mahzuratList);
         mahzuArray=getResources().getStringArray(R.array.mahzuratList);
-        MahzuratListView.setAdapter(new mahzuratCustomAdapter( this,mahzuArray,mahzuPics));
+        MahzuratListView.setAdapter(new mahzuratCustomAdapter( this,mahzuArray));
     }
 }

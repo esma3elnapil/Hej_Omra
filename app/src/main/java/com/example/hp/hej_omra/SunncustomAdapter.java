@@ -16,13 +16,14 @@ public class SunncustomAdapter extends BaseAdapter
 {
     Context con;
     String[]Sunn;
-    int[]pics;
+    String[]sub;
+   // int[]pics;
     private static LayoutInflater inflater=null;
-    public SunncustomAdapter(SunnAlHejActivity sunnAlHejActivity, String[]sunnnames,int[]sunnpics)
+    public SunncustomAdapter(AlMekatActivity mekatActivity, String[]sunnnames,String[]s)
     {
         Sunn=sunnnames;
-        pics=sunnpics;
-        con=sunnAlHejActivity;
+     sub=s;
+        con=mekatActivity;
 
         inflater = (LayoutInflater)con.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -44,13 +45,15 @@ public class SunncustomAdapter extends BaseAdapter
     @Override
     public View getView( int i, View view, ViewGroup viewGroup)
     {
-        TextView SunntextView;
-        ImageView SunnimageView;
-        View rowView = inflater.inflate(R.layout.sunn_itemlist, null);
-        SunntextView= (TextView) rowView.findViewById(R.id.sunntextView);
-        SunnimageView= (ImageView) rowView.findViewById(R.id.sunnimageView);
+        TextView SunntextView,mekat;
+       // ImageView SunnimageView;
+        View rowView = inflater.inflate(R.layout.mekat_itemlist, null);
+        SunntextView= (TextView) rowView.findViewById(R.id.headerTv);
+        mekat= (TextView) rowView.findViewById(R.id.subjTV);
+       // SunnimageView= (ImageView) rowView.findViewById(R.id.sunnimageView);
         SunntextView.setText(Sunn[i]);
-        SunnimageView.setImageResource(pics[i]);
+        mekat.setText(sub[i]);
+       // SunnimageView.setImageResource(pics[i]);
         return rowView;
     }
 }
